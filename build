@@ -1,2 +1,14 @@
 #!/usr/bin/env python
 
+from pathlib import Path
+import loadtxt
+
+
+def update_readme():
+    _fl = Path.cwd().joinpath('README.md')
+    with open(_fl, '+w') as outfl:
+        outfl.writelines(loadtxt.__doc__)
+
+
+if __name__ == '__main__':
+    update_readme()
