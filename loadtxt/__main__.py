@@ -1,14 +1,29 @@
 #!/usr/bin/env python
-
+import re
 import sys
-from loadtxt import new
+
+
+def loadtxt(value):
+    """
+    Load text from file or string.
+
+
+    Examples
+    --------
+    >>> loadtxt(value="temp/text.txt")
+
+    :param value: <str> could be a text or a path to text file.
+
+    :return: <str> Text from input or file.
+    """
+
+    if re.match(r'^(([a-zA-Z]:)|((\\|/){1,2}\w+)\$?)((\\|/)(\w[\w ]*.*))+\.([a-zA-Z0-9]+)$', value):
+        with open(value, "r") as infile:
+            return infile.read()
+    else:
+        return value
+
 
 
 if __name__ == '__main__':
-    if len(sys.argv) > 1:
-        try:
-            print(new(sys.argv[1]))
-        except Exception as e:
-            print(' '.join([str(_e) for _e in e.args]))
-    else:
-        print(new.__doc__)
+    print(loadtxt((sys.ps1 or '')))
