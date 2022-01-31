@@ -3,7 +3,7 @@ import re
 
 def new(value=''):
     """
-    Loads text from a string or a text file and returns it as a string.
+    Load text from file or string.
 
 
     Examples

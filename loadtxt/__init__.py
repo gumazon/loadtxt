@@ -3,7 +3,7 @@ __all__ = ['new']
 
 from pathlib import Path
 
-from .controller import new
+from .loadtxt import new
 
 __doc__ = [
     ' '.join(['#', Path.cwd().name.capitalize(), 'v'+__version__+'\n\n']),
