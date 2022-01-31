@@ -1,4 +1,4 @@
-from loadtxt.loadtxt import new
+from loadtxt.loadtxt.loadtxt import new
 
 
 def test_new():
