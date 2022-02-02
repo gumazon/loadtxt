@@ -10,11 +10,12 @@ python = "^3.9"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
-pytest-cov = "^3.0.0"
 myst-nb = "^0.13.1"
 sphinx-autoapi = "^1.8.4"
 sphinx-rtd-theme = "^1.0.0"
 python-semantic-release = "^7.24.0"
+coverage = "^6.3"
+pytest-cov = "^3.0.0"
 
 [tool.coverage.paths]
 source = ["loadtxt", "*/site-packages"]
